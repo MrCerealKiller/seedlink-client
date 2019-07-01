@@ -1,0 +1,42 @@
+<section id="sign-up">
+  <div class="container my-5 col-md-7 col-lg-6">
+    <div class="container justify-content-center text-center p-3">
+      <h1 class="text-primary">Create a Seedlink Account</h1>
+    </div>
+    <form (submit)=onSubmit()>
+      <div class="form-group p-2">
+        <label for="name" class="text-primary">Choose a Username:</label>
+        <input type="text" class="form-control" id="name" placeholder="Enter username" required [(ngModel)]="name" name="name">
+      </div>
+      <div class="form-group p-2">
+        <label for="email" class="text-primary">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email" required [(ngModel)]="email" name="email">
+      </div>
+      <div class="form-group p-2">
+        <label for="password" class="text-primary">Password:</label>
+        <div class="input-group" id="show_hide_password">
+          <input type="{{passwordType}}" class="form-control" id="password" placeholder="Enter password" required [(ngModel)]="password" name="password">
+          <div class="input-group-append">
+            <button class="btn btn-outline-primary" type="button" (click)=onEyeClick()><i class="fa fa-eye"></i></button>
+          </div>
+        </div>
+      </div>
+      <div class="form-check ml-2">
+        <input type="checkbox" class="form-check-input" id="agree" required [(ngModel)]="agree" name="agree">
+        <label class="form-check-label" for="agree">I agree to the terms of service</label>
+      </div>
+      <hr class="bg-primary my-5">
+      <div class="form-group p-2">
+        <label for="ip" class="text-primary">Seedlink Server Address: <i class="text-muted">(Optional)</i></label>
+        <input type="text" class="form-control" id="ip" placeholder="Enter IP address" [(ngModel)]="address" name="address">
+        <small id="ip-text" class="form-text text-muted">You can add this later in your settings</small>
+      </div>
+      <div class="form-group p-2">
+        <label for="port" class="text-primary">Seedlink Server Port: <i class="text-muted">(Optional)</i></label>
+        <input type="text" class="form-control" id="port" placeholder="Enter port" [(ngModel)]="port" name="port">
+        <small id="port-text" class="form-text text-muted">You can add this later in your settings</small>
+      </div>
+      <button type="submit" class="btn btn-lg btn-outline-primary m-2">Submit <i class="fas fa-leaf"></i></button>
+    </form>
+  </div>
+</section>
