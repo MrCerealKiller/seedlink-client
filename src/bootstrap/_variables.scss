@@ -50,6 +50,7 @@ $stone:   #5C6B73 !default;
 $leaf:    #21A179 !default;
 $moss:    #81AE9D !default;
 $water:   #437C90 !default;
+$splash:  #BAD5DE !default;
 $sky:     #E0FBFC !default;
 
 $colors: () !default;
@@ -74,7 +75,7 @@ $colors: map-merge(
 );
 
 $primary:       $leaf !default;
-$secondary:     $moss !default;
+$secondary:     $water !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;

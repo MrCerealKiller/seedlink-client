@@ -4,37 +4,18 @@
       <h1 class="text-primary">Interfaces</h1>
     </div>
 
-    <div class="container p-3">
+    <div *ngFor="let interface of testInterfaces" class="container p-3">
       <h3 class="text-primary">
-        <i class="fab fa-usb px-3"></i>/dev/input
+        <i class="fab fa-usb px-3"></i>{{interface.name}}
       </h3>
-      <div class="row">
-        <div class="col-sm-9 container border border-primary interface-block rounded text-center p-3">
-          <img src="assets/key_icons/temp_raw.png" width="50" height="50" alt="" class="p-2" />
-          <img src="assets/key_icons/fan_raw.png" width="50" height="50" alt="" class="p-2" />
-          <img src="assets/key_icons/pump_raw.png" width="50" height="50" alt="" class="p-2" />
-          <img src="assets/key_icons/light_raw.png" width="50" height="50" alt="" class="p-2" />
-          <img src="assets/key_icons/soil_raw.png" width="50" height="50" alt="" class="p-2" />
-          <img src="assets/key_icons/water_raw.png" width="50" height="50" alt="" class="p-2" />
-          <img src="assets/key_icons/humid_raw.png" width="50" height="50" alt="" class="p-2" />
-        </div>
-        <div class="col-sm-3">
-          <button type="button" class="btn btn-outline-primary my-3">Add Key</button>
-        </div>
-      </div>
-    </div>
-
-    <div class="container p-3">
-      <h3 class="text-primary">
-        <i class="fab fa-usb px-3"></i>/dev/input
-      </h3>
-      <div class="row">
-        <div class="col-sm-9 container border border-primary interface-block rounded p-3">
-          <i class="fas fa-water"></i>
-        </div>
-        <div class="col-sm-3">
-          <button type="button" class="btn btn-outline-primary my-3">Add Key</button>
-        </div>
+      <div class="container border border-primary interface-block rounded text-center p-3">
+        <ul class="list-inline m-0">
+          <li *ngFor="let key of interface.keys" class="list-inline-item rounded interface-key px-2">
+            <img src="assets/key_icons/{{key.type}}_raw.png" width="50" height="50" alt="" class="p-2" />
+            <p class="text-water m-0">{{key.name}}</p>
+          </li>
+        </ul>
+        <button type="button" class="btn btn-block btn-outline-secondary mt-2 mb-1">Add Key</button>
       </div>
     </div>
 

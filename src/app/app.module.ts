@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
 import { SettingsComponent } from './components/settings/settings.component';
+import { KeynetComponent } from './components/keynet/keynet.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SettingsComponent } from './components/settings/settings.component';
     HomeComponent,
     AboutComponent,
     SignUpComponent,
-    SettingsComponent
+    SettingsComponent,
+    KeynetComponent
   ],
   imports: [
     BrowserModule,
