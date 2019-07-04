@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./keynet.component.scss']
 })
 export class KeynetComponent implements OnInit {
+  isInput: boolean = true;
 
   constructor() { }
 

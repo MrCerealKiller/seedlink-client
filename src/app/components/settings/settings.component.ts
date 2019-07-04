@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
   selector: 'app-settings',
@@ -30,7 +31,7 @@ export class SettingsComponent implements OnInit {
         {type: "valve", name: "Valve.S1"},
         {type: "valve", name: "Valve.S2"},
         {type: "valve", name: "Valve.S3"},
-        {type: "valve", name: "Valve.S4"},        
+        {type: "valve", name: "Valve.S4"},
         {type: "light", name: "Light.Lev1"},
         {type: "light", name: "Light.Lev2"}
       ]
@@ -38,9 +39,10 @@ export class SettingsComponent implements OnInit {
   ]
 
 
-  constructor() { }
+  constructor(private _authService: AuthService) { }
 
   ngOnInit() {
+    console.log(this._authService._authService.auth);
   }
 
 }

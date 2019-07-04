@@ -19,3 +19,7 @@
 .interface-key:hover {
   background-color: $splash;
 }
+
+.interface-key:hover a {
+  text-decoration: none !important;
+}

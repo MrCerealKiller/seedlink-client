@@ -6,6 +6,7 @@ import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { SignUpComponent } from './components/sign-up/sign-up.component';
+import { SignInComponent } from './components/sign-in/sign-in.component';
 
 // TEMP
 import { KeynetComponent } from './components/keynet/keynet.component';
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'contact', component: ContactComponent },
   { path: 'settings', component: SettingsComponent },
   { path: 'sign-up', component: SignUpComponent },
+  { path: 'sign-in', component: SignInComponent },
   { path: 'keynet', component: KeynetComponent }
 ];
 
